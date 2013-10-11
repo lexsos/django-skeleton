@@ -86,6 +86,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
 )
 
+PROJECT_APPS = (
+    'testapp',
+)
+
 INSTALLED_APPS = (
     'admin_tools',
     'admin_tools.theming',
@@ -99,8 +103,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
-    'testapp',
-)
+    'easy_thumbnails',
+) + PROJECT_APPS
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
@@ -139,3 +143,8 @@ LOCALE_PATHS = (
 )
 
 
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (50, 50), 'crop': True},
+    },
+}

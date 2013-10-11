@@ -1,7 +1,13 @@
+{% load thumbnail %}
+
 Hellow Word!
 
 <ul>
   {% for obj in object_list %}
-    <li>{{ obj.title }}</li>
+    <li>
+        {{ obj.title }} <img src="{{ obj.image.url }}">
+        <img src="{{ obj.image|thumbnail_url:'avatar' }}">
+    </li>
   {% endfor %}
 </ul>
+</body>
