@@ -1,2 +1,3 @@
 Django==1.5.4
 django-admin-tools
+south==0.8.2
