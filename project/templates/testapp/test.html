@@ -6,7 +6,7 @@ Hellow Word!
   {% for obj in object_list %}
     <li>
         {{ obj.title }} <img src="{{ obj.image.url }}">
-        <img src="{{ obj.image|thumbnail_url:'avatar' }}">
+        <img src="{% thumbnail obj.image 150x50 crop %}">
     </li>
   {% endfor %}
 </ul>
