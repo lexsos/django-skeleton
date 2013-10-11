@@ -6,8 +6,8 @@ class TestModel(models.Model):
 
     title = models.CharField(max_length=255,
                              verbose_name=_(u'title'))
-#    image = models.ImageField(_(u'image file'),
-#                              upload_to='catalog')
+    image = models.ImageField(_(u'image file'),
+                              upload_to='catalog')
     enabled = models.BooleanField(verbose_name=_('enabled'),
                                   default=True)
     weight = models.PositiveIntegerField(verbose_name=_(u'weight'),
