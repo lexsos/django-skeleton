@@ -6,3 +6,4 @@ easy-thumbnails==1.2
 django-tinymce==1.5.1
 
 -e git://github.com/andreyfedoseev/django-static-precompiler.git#egg=django-static-precompiler
+-e git://@github.com:lexsos/django-mixin.git#egg=django-mixin
