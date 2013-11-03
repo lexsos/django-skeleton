@@ -1,4 +1,4 @@
-{% load thumbnail %}
+{% load thumbnail coffeescript %}
 
 Hellow Word!
 
@@ -10,4 +10,13 @@ Hellow Word!
     </li>
   {% endfor %}
 </ul>
+
+<script type="text/javascript">
+  {% inlinecoffeescript %}
+    console.log "Hello, World!"
+  {% endinlinecoffeescript %}
+</script>
+
+<script type="text/javascript" src="{{ STATIC_URL}}{% coffeescript "js/test.coffee" %}"> </script>
+
 </body>

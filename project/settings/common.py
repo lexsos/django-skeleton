@@ -50,6 +50,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'static_precompiler.finders.StaticPrecompilerFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -110,6 +111,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'easy_thumbnails',
+    'static_precompiler',
 ) + PROJECT_APPS
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
