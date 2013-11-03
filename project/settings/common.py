@@ -112,6 +112,7 @@ INSTALLED_APPS = (
     'south',
     'easy_thumbnails',
     'static_precompiler',
+    'tinymce',
 ) + PROJECT_APPS
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -149,3 +150,11 @@ LOGGING = {
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'locale'),
 )
+
+TINYMCE_SPELLCHECKER = True
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'plugins': "spellchecker",
+    'theme_advanced_buttons3_add': "|,spellchecker",
+}
